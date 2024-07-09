@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Booleans</title>       
+  </head>
+  <body>
+   <script>
+
+      console.log(3 > 5);
+      console.log(5 == '5.00'); // returns true becuase == operator in js converts both vars to the same type then compares equality (same for !=)
+      console.log(5 ==='5.00'); // returns false becuase === operator checks if the 2 values are equal (same for !==)
+
+      if (false){
+        console.log('hello')
+      } else {
+        console.log('else')
+      }
+
+
+      // 3 short cut operators (ternerary, gaurd, and default). Saves you writing out some code. 
+      
+      // ternerary operator '?''
+     const result = true ? 'truthy' : 'falsy'; // if the boolean is true, the first variable is saved to const, if the boolean is false, the second value is saved to const
+     console.log(result);
+     // short cut for a if else statement saving a value to a variable based on a true or false condition. 
+
+     // gaurd operator && is similar to the AND operator but is used outside an if statement. If one part of the line is false, exits that line of code immediately. 
+     const message = false && console.log('message');// wont run because of false and guard operator. Short cut for if statement setting a variable to a certain value. 
+
+     // default operator sets the value of a variable to whichever value is true. If both are true the first value is saved
+     const currency = 'EUR' || 'USD';
+     console.log(currency) // will out put EUR but if EUR was replaced by undefinded, it would output USD. Sets a default statement.    
+   </script>
+  </body>
+</html>
+
+
+
+
+
+

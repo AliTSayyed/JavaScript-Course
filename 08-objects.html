@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Objects</title>       
+  </head>
+  <body>
+   <script>
+    const product = {
+      name: 'socks',
+      price: 1090
+    };
+    console.log(typeof product);
+    console.log(product.name);
+    console.log(product.price);
+
+    product.name = 'cotton socks';
+    console.log(product);
+
+    product.newProperty = true;
+    console.log(product);
+
+    delete product.newProperty;
+    console.log(product);
+
+    const product2 = {
+      name:'shirt',
+      ['delivery-time']: '1-day',
+      rating: { // nested object 'rating' in the object 'product2'
+        stars: 4.5,
+        count: 87
+      },
+      fun: function function1(){ // can save a function inside an object (function inside an object is called a method)
+        console.log('function inside object');
+      }
+    };
+    console.log(product2.name);
+    console.log(product2['name']); 
+    console.log(product2['delivery-time']); // another way of acessing an object property if the proeprty has a name that uses special characters 
+   
+    console.log(product2.rating.count);
+    product2.fun();
+    
+    console.log(JSON.stringify(product2)); // JSON stands for JavaScript Object Notation and is a stardardized format for sending/Creating JS objects 
+    const jsonString = JSON.stringify(product2);
+    console.log(JSON.parse(jsonString));
+
+    // objects are refrence varaibles that point to the memeory adresses of its properties values
+
+    const object = {
+      message: 'Good Job!',
+      price: 799
+    };
+
+    //const message = object.message;
+    const { message, price} = object; // short cut for the line above to store object property into a new var. This is called destructuring 
+    console.log(message);
+    console.log(price);
+
+    const object2 = {
+      // method: function function1(){
+      //   console.log('method');
+      // }
+      method() { // shorthand method syntax in an object
+        console.log('method');
+      }
+    };
+
+    object2.method();
+
+
+   </script>
+  </body>
+</html>
+
+
+
+
+
+
